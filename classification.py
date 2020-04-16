@@ -42,7 +42,7 @@ svm.fit(x_train,y_train)
 prediction_svm = svm.predict(x_test)
 print("svm accuary: ",svm.score(x_test,y_test))
 print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, prediction_svm))
-print('Mean Squared Error:', metrics.mean_squared_error(y_test, prediction))  
+print('Mean Squared Error:', metrics.mean_squared_error(y_test, prediction_svm))  
 print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, prediction_svm)))
 #%% rf classification
 
