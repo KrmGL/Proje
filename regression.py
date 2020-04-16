@@ -66,9 +66,9 @@ dt_y_pred = _dt_regressor.predict(x_test)
 dt_y_pred = dt_y_pred.reshape(-1,1)
 
 print("_dt_regressor score:", _dt_regressor.score(x_test,y_test))
-print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
-print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))  
-print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
+print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, dt_y_pred))
+print('Mean Squared Error:', metrics.mean_squared_error(y_test, dt_y_pred))  
+print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, dt_y_pred)))
 #%%
 from sklearn.ensemble import RandomForestRegressor
 
@@ -80,7 +80,7 @@ rf_y_pred = dt_y_pred.reshape(-1,1)
 
 
 print("_rf_regressor score:", _rf_regressor.score(x_test,y_test))
-print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_pred))
-print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_pred))  
-print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
+print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, rf_y_pred))
+print('Mean Squared Error:', metrics.mean_squared_error(y_test, rf_y_pred))  
+print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, rf_y_pred)))
 
